@@ -33,7 +33,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Go to activity"/>
                                 <connections>
-                                    <segue destination="qa9-bR-0pq" kind="show" identifier="showActivity" id="iLY-Nj-qjd"/>
+                                    <segue destination="9VT-tV-bYd" kind="show" identifier="showActivities" id="Ux9-Jb-MWP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2l5-UV-65A">
@@ -42,7 +42,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Go to Dashboard"/>
                                 <connections>
-                                    <segue destination="9VT-tV-bYd" kind="show" identifier="showDashboard" id="Lnc-lp-968"/>
+                                    <segue destination="qa9-bR-0pq" kind="show" identifier="showDashboard" id="z7M-RH-c90"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btb-o0-Xpx">
@@ -51,7 +51,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Go to Browser"/>
                                 <connections>
-                                    <segue destination="mie-FZ-rrd" kind="show" identifier="showBrowser" id="n8n-ru-jWE"/>
+                                    <segue destination="mie-FZ-rrd" kind="show" identifier="showAbout" id="n8n-ru-jWE"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="XXL-c6-Kkk">
@@ -251,26 +251,53 @@
             </objects>
             <point key="canvasLocation" x="1838.9312977099237" y="-27.464788732394368"/>
         </scene>
-        <!--Activity-->
+        <!--Dashboard-->
         <scene sceneID="vih-yB-G3R">
             <objects>
-                <viewController storyboardIdentifier="ActivityViewController" title="Activity" id="qa9-bR-0pq" customClass="ActivityViewController" customModule="MidtermIosJoann" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ActivityViewController" title="Dashboard" id="qa9-bR-0pq" customClass="DashboardViewController" customModule="MidtermIosJoann" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W5k-3f-oYP">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Courses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGs-cD-b95">
+                                <rect key="frame" x="135" y="162" width="122" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="courses" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0iS-ib-SZq">
+                                <rect key="frame" x="97" y="218" width="203" height="243"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HAQ-g4-fdu">
+                                <rect key="frame" x="78" y="495" width="213" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="OLN-hj-Oxm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="wOX-FT-wzx"/>
+                    <connections>
+                        <outlet property="coursesLabel" destination="0iS-ib-SZq" id="ddi-C3-2md"/>
+                        <outlet property="totalLabel" destination="HAQ-g4-fdu" id="Lew-Cd-HAC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jw7-je-NWo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2636" y="-27"/>
+            <point key="canvasLocation" x="2635.8778625954196" y="-27.464788732394368"/>
         </scene>
-        <!--Dashboard-->
+        <!--Activity-->
         <scene sceneID="CoE-s8-Raw">
             <objects>
-                <viewController storyboardIdentifier="DashboardViewController" title="Dashboard" id="9VT-tV-bYd" customClass="DashboardViewController" customModule="MidtermIosJoann" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DashboardViewController" title="Activity" id="9VT-tV-bYd" customClass="ActivityViewController" customModule="MidtermIosJoann" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j7K-lb-KMg">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

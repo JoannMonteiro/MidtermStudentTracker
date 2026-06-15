@@ -24,7 +24,6 @@ class ViewController: UIViewController {
 
             logoImageView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
 
-            // Animate everything in
             UIView.animate(withDuration: 1.75) {
                 self.logoImageView.alpha = 1
                 self.logoImageView.transform = CGAffineTransform.identity
@@ -37,6 +36,18 @@ class ViewController: UIViewController {
     @IBAction func goToProfilePressed(_ sender: UIButton) {
         performSegue(withIdentifier: "showProfile", sender: self)
     }
+    
+    @IBAction func dashboardPressed(_ sender: UIButton) {
+            performSegue(withIdentifier: "showDashboard", sender: self)
+        }
+
+        @IBAction func activitiesPressed(_ sender: UIButton) {
+            performSegue(withIdentifier: "showActivities", sender: self)
+        }
+
+        @IBAction func aboutPressed(_ sender: UIButton) {
+            performSegue(withIdentifier: "showAbout", sender: self)
+        }
 
 }
 
