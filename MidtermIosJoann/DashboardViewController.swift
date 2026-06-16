@@ -12,10 +12,12 @@ class DashboardViewController: UIViewController {
     @IBOutlet weak var totalLabel: UILabel!
     
     var courses = [
-            "iOS Development",
-            "Java Programming",
-            "Web Development",
-            "Database Systems"
+            "Mobile iOS App Development",
+            "Advanced Enterprise Java",
+            "Mobile Android App Development",
+            "Advanced Database Processes",
+            "Project Managament Processes",
+            "Software Process Methodologies"
         ]
     override func viewDidLoad() {
         super.viewDidLoad()

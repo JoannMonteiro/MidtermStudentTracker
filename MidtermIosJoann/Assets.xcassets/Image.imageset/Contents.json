@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "oxford.jpeg",
+      "filename" : "oxford.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "oxford 1.jpeg",
+      "filename" : "oxford 1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "oxford 2.jpeg",
+      "filename" : "oxford 2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

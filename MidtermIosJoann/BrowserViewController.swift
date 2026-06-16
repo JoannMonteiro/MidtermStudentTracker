@@ -8,22 +8,19 @@
 import UIKit
 
 class BrowserViewController: UIViewController {
-
+    @IBOutlet weak var appVersionLabel: UILabel!
+    @IBOutlet weak var developerLabel: UILabel!
+    @IBOutlet weak var courseInfoLabel: UILabel!
+    @IBOutlet weak var studentIDLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        appVersionLabel.text = "Version: 1.0"
+        developerLabel.text = "Developer: Joann Monteiro"
+        courseInfoLabel.text = "Course: Mobile iOS Application Development"
+        studentIDLabel.text = "Student ID: 991726993"
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
